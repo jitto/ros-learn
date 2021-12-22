@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  myros:
+    build: myros/
+    volumes:
+      - ./workspace:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=$DISPLAY
+#    command: source install /workspace/setup.bash 
